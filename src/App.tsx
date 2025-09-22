@@ -103,15 +103,15 @@ function App() {
 
   return (
     <div className={dark ? "dark" : ""}>
-      <div className=" min-h-screen bg-gray-100 dark:bg-gray-900 p-6 text-gray-900 dark:text-gray-100 ">
+      <div className="w-full min-h-screen bg-gray-100 dark:bg-gray-900 p-6 text-gray-900 dark:text-gray-100 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="max-w-5xl mx-auto space-y-6"
         >
-          <div className=" flex justify-between items-center mb-5 dark:bg-gray-800 p-4 rounded-lg shadow">
-            <h1 className="text-2xl font-bold text-center">
+          <div className="w-full flex justify-between items-center mb-5 dark:bg-gray-800 p-4 rounded-lg shadow">
+            <h1 className="text-xl md:text-2xl font-bold text-center">
               Hello {user?.name} !!👋
             </h1>
             <button
@@ -124,7 +124,7 @@ function App() {
 
           {/* <div className=" max-w-xl mx-auto space-y-6 "> */}
           <div className="flex justify-between items-center ">
-            <h1 className="text-3xl font-bold text-center"> Expense Tracker</h1>
+            <h1 className="text-xl md:text-3xl font-bold text-center"> Expense Tracker</h1>
             <ToggleTheme />
           </div>
 
@@ -133,7 +133,7 @@ function App() {
           <TransactionList filtered={filtered || undefined} />
           <TransactionFilter onFilter={setFiltered} />
 
-          <div className="flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow ">
+          <div className="w-full flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow ">
             <ExportCSV />
             <ImportCSV />
           </div>
