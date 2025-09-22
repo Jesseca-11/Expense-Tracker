@@ -133,7 +133,7 @@ function App() {
           <TransactionList filtered={filtered || undefined} />
           <TransactionFilter onFilter={setFiltered} />
 
-          <div className="w-full md:flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow ">
+          <div className="w-full flex-wrap md:flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow ">
             <ExportCSV />
             <ImportCSV />
           </div>
