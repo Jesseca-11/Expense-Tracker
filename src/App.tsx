@@ -112,7 +112,7 @@ function App() {
         >
           <div className=" flex justify-between items-center mb-5 dark:bg-gray-800 p-4 rounded-lg shadow">
             <h1 className="text-2xl font-bold text-center">
-              Hello {user?.name || user?.email} !!👋
+              Hello {user?.name} !!👋
             </h1>
             <button
               className="px-4 py-2 bg-red-500 text-white rounded-lg shadow transition hover:bg-red-600"
