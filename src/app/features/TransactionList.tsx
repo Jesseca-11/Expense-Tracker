@@ -29,7 +29,7 @@ const TransactionList = ({filtered}:Props) => {
         {list.length === 0 ? (
             <p className="text-grey-500 dark:text-gray-400"> No transactions yet.</p>
         ) : (
-            <table className='w-full text-sm md:text-lg text-center border-collapse ps-4'>
+            <table className='w-full text-sm md:text-lg text-start border-collapse ps-4'>
                 <thead className=' '>
                     <tr className="border-b dark:border-gray-700 ">
                         <th className="py-2">Description</th>
