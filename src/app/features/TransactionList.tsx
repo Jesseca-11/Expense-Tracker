@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { dispatch, selector } from '../hook'
-import { deleteTransaction, editTransaction } from './transactionSlice'
+import { deleteTransaction } from './transactionSlice'
 import { Transaction } from './transactionTypes'
 import TransactionForm from './TransactionForm'
-import { table } from 'console'
-import { tab } from '@testing-library/user-event/dist/tab'
+
 
 
 type Props = {
@@ -19,7 +18,7 @@ const TransactionList = ({filtered}:Props) => {
 
 
   return (
-    <div className='p-4 bg-white dark:bg-gray-800 rounded shadow mt-4'>
+    <div className='p-2 md:p-4 bg-white dark:bg-gray-800 rounded shadow mt-4'>
         <h2 className='text-xl font-bold mb-4'>📋 Transactions</h2>
         {edited && (
             <div className="mb-4">
@@ -30,9 +29,9 @@ const TransactionList = ({filtered}:Props) => {
         {list.length === 0 ? (
             <p className="text-grey-500 dark:text-gray-400"> No transactions yet.</p>
         ) : (
-            <table className='w-full text-left border-collapse'>
-                <thead>
-                    <tr className="border-b dark:border-gray-700">
+            <table className='w-full text-sm md:text-lg text-center border-collapse ps-4'>
+                <thead className=' '>
+                    <tr className="border-b dark:border-gray-700 ">
                         <th className="py-2">Description</th>
                         <th className="py-2">Amount</th>
                         <th className="py-2">Type</th>

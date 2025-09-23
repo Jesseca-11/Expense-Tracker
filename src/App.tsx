@@ -103,7 +103,7 @@ function App() {
 
   return (
     <div className={dark ? "dark" : ""}>
-      <div className="w-full min-h-screen bg-gray-100 dark:bg-gray-900 p-6 text-gray-900 dark:text-gray-100 ">
+      <div className="w-full min-h-screen bg-gray-100 dark:bg-gray-900 p-1 md:p-6 text-gray-900 dark:text-gray-100 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

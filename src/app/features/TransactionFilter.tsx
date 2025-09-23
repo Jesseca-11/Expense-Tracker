@@ -22,10 +22,10 @@ const TransactionFilter = ({onFilter}: filters) => {
         
     }
   return (
-    <div className='p-4 bg-white dark:text-gray-800 runded-lg shadow-sm mb-4 flex gap-3'>
+    <div className='w-full p-4 bg-white dark:text-gray-800 runded-lg shadow-sm mb-4 flex gap-3'>
       <select value={type} 
       onChange={(e) => setType(e.target.value as "all" | "income" | "expense") }
-      className='p-2 border rounded-lg '
+      className='p-2 border rounded-lg text-sm '
       >
         <option value="all">All</option>
         <option value="income">Income</option>
