@@ -32,7 +32,7 @@ const TransactionList = ({filtered}:Props) => {
             <table className='w-full text-sm md:text-lg text-start border-collapse ps-4'>
                 <thead className=' '>
                     <tr className="border-b dark:border-gray-700 ">
-                        <th className="py-2">Description</th>
+                        <th className="py-2">Item</th>
                         <th className="py-2">Amount</th>
                         <th className="py-2">Type</th>
                         <th className="py-2">Category</th>
