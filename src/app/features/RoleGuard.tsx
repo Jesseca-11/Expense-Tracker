@@ -12,9 +12,9 @@ const RoleGuard = ({allowedRoles, children}: RoleGuardProps) => {
     if(!user || !allowedRoles.includes(user.role)){
         return(
             <div className="bg-red-100 border border-red-900 p-4 rounded-lg text-center shadow">
-            {/* <p className=" text-red-600 font-semibold dark:text-red-300">
+            <p className=" text-red-600 font-semibold dark:text-red-300">
                 🚫 Access Denied: you don't have permission to view this content 
-            </p> */}
+            </p>
             </div>
         );
     }

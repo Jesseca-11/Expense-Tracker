@@ -24,7 +24,7 @@ export  type AuthState = {
         register: (state, action: PayloadAction<User>) => {
             const users:User[] = JSON.parse(localStorage.getItem("users") || "[]");
             // const role: "admin" | "user" = action.payload.email.includes("admin") ? "admin" : "user";
-            const newUser: User = action.payload
+            const newUser: User = {...action.payload, role: action.payload.role || "user",}
             users.push(newUser)
             localStorage.setItem("users", JSON.stringify(users));
 
@@ -38,6 +38,7 @@ export  type AuthState = {
             );
             
             if(existingUser){
+                if(!existingUser.role)existingUser.role = "user";
                 state.user = existingUser;
                 localStorage.setItem("user", JSON.stringify(existingUser))
             }else {
